@@ -1,0 +1,111 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: 40px 100vh; */
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    grid-column: 1 / -1;
+    background-color: #00AAF5;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 40px;
+    z-index: 100;
+}
+
+side{
+    grid-column: 1 / 4;
+    background-color: #fff;
+    text-align: center;
+}
+
+side > ul{
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+side > ul > li {
+    margin-bottom: 20px;
+    
+}
+
+side > ul > li > a{
+    text-decoration: none;
+    color: #00AAF5;
+    font-size: 18px;
+    font-family: 'Cardo', serif;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    color: #00aaf5;
+}
+
+content{
+    grid-column: 4/ -1;
+}
+
+.v{
+    transition: all 10s cubic-bezier(0.73, 0.02, 0.29, 1) 0s !important;
+    top: 50%;
+    transform: translate(0%, -35%);
+    overflow: hidden;
+}
+
+
+
+.social-container{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.social-share{
+    
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    display: block;
+    align-self: center;
+    justify-content: center;
+}
+
+.social-img{
+    display: block;
+    width: 39px;
+    height: 39px;
+    margin-right: 16px;
+}
+
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+small{
+    font-size: small;
+    margin: 10px;
+}
+
+
+.onsei{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
