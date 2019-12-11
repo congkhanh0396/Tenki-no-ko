@@ -1,8 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo|Noto+Serif+JP");
+.font {
+  font-family: 'Cardo', serif;
+  font-family: 'Noto Serif JP', serif;
+}
+
 html, body{
     margin: 0;
     padding: 0;
 }
 
+
+ul{
+    list-style: none;
+    margin: 0;
+}
 
 .container{
     display: grid;
@@ -72,7 +83,7 @@ content{
     display: block;
     width: 100%;
     min-height: 100vh;
-    transform: translate(0%, -45%);
+    transform: translate(0%, -50%);
     background: url("./v.jpg") no-repeat center center;
     background-size: cover;
 }
@@ -97,8 +108,6 @@ content{
 .main .prizes img{
     display: block;
     max-height: 13vh;
-    width: 136px;
-    height: 50px;
 }
 
 .copy{
@@ -123,6 +132,74 @@ content{
     -webkit-animation: titlecopy 6s ease-in 1.5s;
     -webkit-animation-fill-mode: both;
 }
+
+.roadshow{
+    margin: -16px 0 0 0;
+}
+
+.banner{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.main .banner ul {
+    display: flex;
+    padding: 0;
+}
+
+
+.main .banner ul li {
+    padding-right: 10px;
+}
+
+.main .banner ul li img{
+    height: 50px;
+}
+
+.badge{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.main .badge ul{
+    display: flex;
+    height: 100%;
+}
+
+.main .badge ul li{
+    display: block;
+    padding-left: 10px;
+}
+
+.main .badge ul li a{
+    position: relative;
+    display: block;
+}
+
+.main .badge ul li a img{
+    max-height: 17vh;
+}
+
+.main .badge ul li a img.fuki{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 4.5vw;
+    transform: translate(-26%, -86%);
+}
+
+/* .btns{
+    transition: all .5s ease 0s;
+    transform: translateY(32%);
+} */
+
+/* .pages{
+    position: absolute;
+    top: 50%;
+    left: 0;
+} */
 
 @keyframes titlecopy{
     0% {
@@ -175,7 +252,7 @@ content{
     transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
-    opacity: 1;
+    
 
 }
 
@@ -185,10 +262,10 @@ content{
     left: 70%;
     display: block;
     width: 15%;
-    height: 93vh;
+    height: 80vh;
     min-height: 41%;
     max-height: 64%;
-    transform: translateY(-63%);
+    transform: translateY(-50%);
 }
 
 .main .txt h1{
@@ -240,8 +317,9 @@ content{
 }
 
 small{
+    display: block;
     font-size: small;
-    margin: 10px;
+    margin: 15px;
 }
 
 
