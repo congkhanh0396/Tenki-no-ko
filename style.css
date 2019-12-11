@@ -7,8 +7,8 @@ html, body{
 .container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* grid-template-rows: 40px 100vh; */
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    /* grid-template-rows: repeat(3, 1fr); */
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -54,16 +54,129 @@ side > ul > li > a{
 }
 
 content{
-    grid-column: 4/ -1;
+    grid-column: 4/ 13;
 }
 
-.v{
+
+.main{
+    position: relative;
+    width: 100%;
+    background: #1840a5;
+}
+
+.main .v{
     transition: all 10s cubic-bezier(0.73, 0.02, 0.29, 1) 0s !important;
+    position: absolute;
     top: 50%;
-    transform: translate(0%, -35%);
-    overflow: hidden;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    transform: translate(0%, -45%);
+    background: url("./v.jpg") no-repeat center center;
+    background-size: cover;
 }
 
+.main .v img{
+    display: block;
+    width: 100%;
+}
+
+.spacer{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main .prizes{
+    position: absolute;
+    z-index: 1;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box
+}
+
+.main .prizes img{
+    display: block;
+    max-height: 13vh;
+    width: 136px;
+    height: 50px;
+}
+
+.copy{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.active{
+    animation: opcopy 6s ease 1.8s;
+    animation-fill-mode: both;
+    -webkit-animation: opcopy 5s ease 1.5s;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes opcopy{
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    25% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    75% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.txt{
+    position: absolute;
+    top: 18%;
+    left: 22%;
+    transition: all 1.5s ease 7.5s;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    
+ 
+}
+
+.p{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    display: block;
+    width: 15%;
+    height: 93vh;
+    min-height: 41%;
+    max-height: 64%;
+    transform: translateY(-63%);
+}
+
+.main .txt h1{
+    margin: 0;
+    padding: 0;
+}
+
+.main .txt h1 img{
+    width: 80%;
+}
+
+
+
+/* Delay css ở thuộc tính */
+
+/* .top-item{
+    transition-delay: 8.5s !important;
+} */
 
 
 .social-container{
