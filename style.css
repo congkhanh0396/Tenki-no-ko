@@ -4,9 +4,14 @@
   font-family: 'Noto Serif JP', serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body{
     margin: 0;
     padding: 0;
+
 }
 
 
@@ -40,7 +45,19 @@ side{
     grid-column: 1 / 4;
     background-color: #fff;
     text-align: center;
+
+    /* effect */
+    opacity: 1;
+    transform: translateY(10);
+    transition:  2s all ease-in
 }
+
+
+/* .intro-appear{
+        opacity: 1;
+        transform: translateY(0px);
+} */
+
 
 side > ul{
     list-style: none;
@@ -53,6 +70,7 @@ side > ul > li {
     margin-bottom: 20px;
     
 }
+
 
 side > ul > li > a{
     text-decoration: none;
@@ -76,16 +94,22 @@ content{
 }
 
 .main .v{
-    transition: all 10s cubic-bezier(0.73, 0.02, 0.29, 1) 0s !important;
+    /* transition: all 10s cubic-bezier(0.73, 0.02, 0.29, 1) 0s !important; */
+    /* transition:  10s all ease-in-out !important; */
     position: absolute;
     top: 50%;
     left: 0;
     display: block;
     width: 100%;
     min-height: 100vh;
-    transform: translate(0%, -50%);
+
     background: url("./v.jpg") no-repeat center center;
     background-size: cover;
+}
+
+.v-start{
+    transition:  10s all ease-in-out !important;
+    transform: translate(0%, -50%);
 }
 
 .main .v img{
@@ -131,6 +155,17 @@ content{
     animation-fill-mode: both;
     -webkit-animation: titlecopy 6s ease-in 1.5s;
     -webkit-animation-fill-mode: both;
+}
+
+.badge-active{
+    animation:   badgecopy 7s ease-in 1.8s;
+    animation-fill-mode: both;
+    -webkit-animation: titlecopy 7s ease-in 1.5s;
+    -webkit-animation-fill-mode: both;
+}
+
+.banner-active{
+    animation: opcity 1.5s ease-in 7s;
 }
 
 .roadshow{
@@ -222,6 +257,30 @@ content{
         opacity: 1;
     }
 }
+
+
+@keyframes badgecopy{
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    25% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    75% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 
 @keyframes opcopy{
     0% {
@@ -330,3 +389,116 @@ small{
     
 }
 
+.top-item{
+    -webkit-transition-delay: 8.5s !important;
+    transition-delay: 8.5s !important;
+}
+
+
+.pages{
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 0;
+    transform: translateZ(0);
+    /* backface-visibility: hidden; */
+}
+
+section{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    line-height: 1.8;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+    text-align: left;
+    letter-spacing: .02em;
+    color: #00aaf5;
+    background: #fff;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.page{
+    text-align: left;
+}
+
+.inner {
+    max-width: 790px;
+}
+
+.main section h2{
+    font-family: 'Cardo', serif;
+    font-size: 22px;
+    padding-bottom: .8em;
+    letter-spacing: .15em;
+}
+
+.main .intro p {
+    font-size: 13px;
+    line-height: 2.3;
+    padding-bottom: 1em;
+}
+
+.main section p {
+    padding: 1em 0 1.8em;
+}
+
+.page p {
+    color: #000;
+}
+
+.main .intro .lead {
+    font-size: 17px;
+    line-height: 2.5;
+}
+
+.main .intro figure{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+}
+
+figure{
+    padding: 0;
+    margin: 0;
+}
+
+.main .story figure {
+    padding: 15px 0 20px;
+}
+
+.main .story p {
+    font-size: 17px;
+    line-height: 2.5;
+    padding-bottom: 1.2em;
+}
+
+.main .credit {
+    text-align: center;
+}
+
+.main .credit h2 {
+    padding-bottom: 45px;
+}
+
+
+.intro-text{
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.intro-1{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s all ease-in-out;
+}
